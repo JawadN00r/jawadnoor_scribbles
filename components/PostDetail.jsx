@@ -43,6 +43,8 @@ const PostDetail = ({ post }) => {
       case 'list-item-child':
         // console.log(obj)
         return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
+      case 'code-block':
+        return <pre className="whitespace-pre-wrap bg-gray-100 px-4 py-3 my-6 mx-4 rounded" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</pre>;
       case 'image':
         return (
           <img
