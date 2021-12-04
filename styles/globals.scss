@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 html,
 body {
@@ -80,7 +80,7 @@ a {
 
 #hh {
   // text-transform: uppercase;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Fuzzy Bubbles', cursive;
   // border: 4px double rgba(255, 255, 255, .25);
   // border-width: 4px 0;
 
@@ -101,7 +101,7 @@ a {
 
   -webkit-text-fill-color: transparent;
   // -webkit-animation: aitf 80s linear infinite;
-  animation: aitf 80s linear infinite;
+  animation: aitf 100s linear infinite;
 
   /* Activate hardware acceleration for smoother animations */
 
