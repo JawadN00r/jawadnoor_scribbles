@@ -1,5 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import moment from 'moment'
+import hljs from 'highlight.js';
+// import python from 'highlight.js/lib/languages/python';
+// hljs.registerLanguage('python', python);
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -33,18 +36,22 @@ const PostDetail = ({ post }) => {
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
-        return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return <p key={index} className="mb-8 sm:text-sm lg:text-base">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'bulleted-list':
-        return <ul className="block list-disc my-4 mx-0 pl-10" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</ul>;
+        return <ul className="block list-disc my-4 mx-0 pl-10 sm:text-sm lg:text-base" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</ul>;
       case 'list-item':
         return <li className="list-item" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</li>;
       case 'list-item-child':
         // console.log(obj)
         return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
       case 'code-block':
-        return <pre className="whitespace-pre-wrap bg-gray-100 px-4 py-3 my-6 mx-4 rounded" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</pre>;
+        return <pre key={index} className="mb-8">
+          <code>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
+      case 'class':
+        return <pre key={index}>
+          <code className={obj.className}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
       case 'image':
         return (
           <img
@@ -59,6 +66,9 @@ const PostDetail = ({ post }) => {
         return modifiedText;
     }
   };
+  useEffect(() => {
+    hljs.initHighlighting();
+    }, []);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8
      pb-12 mb-8">
@@ -95,7 +105,7 @@ const PostDetail = ({ post }) => {
         <h1 className="mb-8 text-3xl text-center font-semibold">
           {post.title}
         </h1>
-        {console.log(post.content.raw)}
+        {/* {console.log(post.content.raw)} */}
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
           return getContentFragment(index, children, typeObj, typeObj.type);

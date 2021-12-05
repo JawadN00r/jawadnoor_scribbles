@@ -13,7 +13,7 @@ const PostCard = ({post}) => {
          className="absolute h-80 w-full object-cover
           shadow-lg rounded-t-lg lg:rounded-lg"/>
       </div>
-      <h1 className="transition duration-700 text-center mb-8
+      <h1 className="transition duration-700 text-center mb-8 px-4
        cursor-pointer hover:text-pink-600 text-3xl font-semibold">
          <Link href={`/post/${post.slug}`}>
            {post.title}
@@ -41,8 +41,8 @@ const PostCard = ({post}) => {
           </span>
          </div>
        </div>
-       <p className="text-center text-lg text-gray-700
-        font-normal px-4 lg:px-20 mb-8">{post.excerpt}</p>
+       <p className="text-center text-sm text-gray-700
+        font-normal lg:text-base px-4 lg:px-20 mb-8">{post.excerpt}</p>
         <div className="text-center">
           <Link href= {`/post/${post.slug}`}>
             <span className="transition duration-500 transform
