@@ -1,10 +1,16 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import moment from 'moment'
 import hljs from 'highlight.js';
-// import python from 'highlight.js/lib/languages/python';
-// hljs.registerLanguage('python', python);
+import python from 'highlight.js/lib/languages/python';
+import java from 'highlight.js/lib/languages/java';
+import cpp from 'highlight.js/lib/languages/cpp';
+
 
 const PostDetail = ({ post }) => {
+  hljs.registerLanguage('python', python);
+  hljs.registerLanguage('java', java);
+  hljs.registerLanguage('cpp', cpp);
+
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -68,7 +74,7 @@ const PostDetail = ({ post }) => {
   };
   useEffect(() => {
     hljs.initHighlighting();
-    }, []);
+  }, []);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8
      pb-12 mb-8">
