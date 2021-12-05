@@ -48,7 +48,10 @@ const PostDetail = ({ post }) => {
         return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
       case 'code-block':
         return <pre key={index}>
-          <code className="python">{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
+          <code>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
+      case 'class':
+        return <pre key={index}>
+          <code className={obj.className}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
       case 'image':
         return (
           <img
@@ -102,7 +105,7 @@ const PostDetail = ({ post }) => {
         <h1 className="mb-8 text-3xl text-center font-semibold">
           {post.title}
         </h1>
-        {console.log(post.content.raw)}
+        {/* {console.log(post.content.raw)} */}
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
           return getContentFragment(index, children, typeObj, typeObj.type);
