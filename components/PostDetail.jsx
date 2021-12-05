@@ -53,7 +53,7 @@ const PostDetail = ({ post }) => {
         // console.log(obj)
         return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
       case 'code-block':
-        return <pre key={index} className="mb-8">
+        return <pre key={index} className="my-8">
           <code>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
       case 'class':
         return <pre key={index}>
