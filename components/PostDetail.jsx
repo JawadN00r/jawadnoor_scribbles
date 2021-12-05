@@ -1,5 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import moment from 'moment'
+import hljs from 'highlight.js';
+// import python from 'highlight.js/lib/languages/python';
+// hljs.registerLanguage('python', python);
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -44,7 +47,8 @@ const PostDetail = ({ post }) => {
         // console.log(obj)
         return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
       case 'code-block':
-        return <pre className="whitespace-pre-wrap bg-gray-100 px-4 py-3 my-6 mx-4 rounded" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</pre>;
+        return <pre key={index}>
+          <code className="python">{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
       case 'image':
         return (
           <img
@@ -59,6 +63,9 @@ const PostDetail = ({ post }) => {
         return modifiedText;
     }
   };
+  useEffect(() => {
+    hljs.initHighlighting();
+    }, []);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8
      pb-12 mb-8">
