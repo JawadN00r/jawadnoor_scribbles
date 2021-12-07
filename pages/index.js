@@ -12,7 +12,7 @@ export default function Home({ posts }) {
       </Head>
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1">
+        <div className="lg:col-span-8 col-span-1 grid grid-cols-1 lg:grid-cols-2 sm:gap-5 grid-flow-row auto-rows-max relative pb-12">
           {posts.map((post, index) => (
             <PostCard post={post.node} key={post.node.title} />
           ))}

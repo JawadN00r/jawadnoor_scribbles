@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { grpahCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
-  <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+  <div className=" shadow-2xl rounded-lg p-2 lg:p-4 pb-4 lg:pb-5 mb-8 relative bg-white">
     {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
       <Image
         unoptimized
@@ -44,7 +44,7 @@ const PostCard = ({ post }) => (
         <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
       </div>
     </div>
-    <p className="text-center text-sm text-gray-700 font-normal sm:text-sm lg:text-base  px-4 lg:px-20 mb-8">
+    <p className="text-center text-sm text-gray-700 font-normal sm:text-sm lg:text-base  px-2 lg:px-4 mb-8">
       {post.excerpt}
     </p>
     <div className="text-center">
