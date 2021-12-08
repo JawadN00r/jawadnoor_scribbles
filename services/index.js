@@ -257,3 +257,46 @@ export const getRecentPosts = async () => {
 
   return result.posts;
 };
+
+export const getSearchResult = async (searchValue,skip) => {
+  const query = gql`
+query MyQuery($searchValue:String!,$skip: Int) {
+  postsConnection(first: 6, skip: $skip, orderBy: createdAt_DESC,where:{OR:[{title_contains:$searchValue},{slug_contains:$searchValue}]}) {
+    edges {
+      node {
+        author {
+          bio
+          id
+          name
+          photo {
+            url
+          }
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+        isWorking {
+          now
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      pageSize
+    }
+  }
+}`;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
+};
