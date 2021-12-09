@@ -261,7 +261,7 @@ export const getRecentPosts = async () => {
 export const getSearchResult = async (searchValue,skip) => {
   const query = gql`
 query MyQuery($searchValue:String!,$skip: Int) {
-  postsConnection(first: 6, skip: $skip, orderBy: createdAt_DESC,where:{OR:[{title_contains:$searchValue},{slug_contains:$searchValue}]}) {
+  postsConnection(first: 6, skip: $skip, orderBy: createdAt_DESC,where:{OR:[{title_contains:$searchValue},{excerpt_contains:$searchValue}]}) {
     edges {
       node {
         author {
@@ -283,9 +283,6 @@ query MyQuery($searchValue:String!,$skip: Int) {
           name
           slug
         }
-        isWorking {
-          now
-        }
       }
     }
     pageInfo {
@@ -296,7 +293,7 @@ query MyQuery($searchValue:String!,$skip: Int) {
   }
 }`;
 
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query,{ searchValue,skip });
 
-  return result.postsConnection.edges;
+  return result.postsConnection;
 };
