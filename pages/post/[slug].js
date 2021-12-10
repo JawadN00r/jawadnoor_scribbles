@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import {
   PostDetail,
@@ -22,6 +23,10 @@ const PostDetails = ({ post }) => {
 
   return (
     <>
+      <Head>
+        <title>{post.title}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="container mx-auto px-4 sm:px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">

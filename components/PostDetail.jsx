@@ -73,7 +73,7 @@ const PostDetail = ({ post }) => {
     }
   };
   useEffect(() => {
-    hljs.initHighlighting();
+    hljs.highlightAll();
   }, []);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8
