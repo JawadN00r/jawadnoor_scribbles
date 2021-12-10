@@ -8,7 +8,7 @@ const Categories = () => {
     getCategories()
       .then((newCategories) => setCategories(newCategories))
   }, [])
-  console.log(categories)
+  // console.log(categories)
   return (
     <div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 mb-8 pb-12 text-sm sm:text-base">
       <h3 className="text-center text-sm sm:text-xl mb-4 sm:mb-8 font-semibold border-b border-blue-300 pb-4">

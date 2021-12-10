@@ -7,20 +7,48 @@ import _ from 'lodash'
 
 export default function Home() {
   const [seachedPosts, setSeachedPosts] = useState([])
+  const [skip, setSkip] = useState(0)
   const searchInputRef = useRef()
+
+  
+  useEffect(() => {
+    getSearchResult("",0).then((result)=>(setSeachedPosts(result)))
+    }, [])
+  // console.log(seachedPosts)
+    
   const handleSearch = (e) => {
     const searchString = searchInputRef.current.value
-    console.log(searchString)
+    // console.log(searchString)
     getSearchResult(searchString,0).then(
       (result)=>(setSeachedPosts(result))
     )
+    setSkip(0)
   }
-  useEffect(() => {
-    getSearchResult("",0).then(
+
+  const handleNextButton = (e) => {
+    const newSkip = skip + 6
+    setSkip(newSkip)
+    // console.log(skip)
+    // console.log(newSkip)
+    const searchString = searchInputRef.current.value
+    // console.log(searchString)
+    getSearchResult(searchString,newSkip).then(
       (result)=>(setSeachedPosts(result))
     )
-  }, [])
-  console.log(seachedPosts)
+  }
+
+  const handlePreviousButton = (e) => {
+    const newSkip = Math.max(0,skip - 6)
+    setSkip(newSkip)
+    // console.log(skip)
+    // console.log(newSkip)
+    const searchString = searchInputRef.current.value
+    // console.log(searchString)
+    getSearchResult(searchString,newSkip).then(
+      (result)=>(setSeachedPosts(result))
+    )
+  }
+
   return (
     <div className="container mx-auto px-4 sm:px-10 mb-8 relative">
       <Head>
@@ -43,14 +71,18 @@ export default function Home() {
             <PostCard post={post.node} key={post.node.title} />
           ))}
           <div className="flex justify-content absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
-            <button areal-label="Previous" disabled={!seachedPosts.pageInfo.hasPreviousPage} className="hover:ring-2 hover:ring-offset-1 font-semibold 
+            <button areal-label="Previous" disabled={!seachedPosts.pageInfo?.hasPreviousPage}
+            onClick={handlePreviousButton}
+            className="hover:ring-2 hover:ring-offset-1 font-semibold 
             focus:ring-white focus:ring-2 focus:ring-offset-1 hover:ring-white
             focus:bg-black focus:outline-none hover:scale-95 w-full sm:w-auto 
             bg-black transition duration-150 ease-in-out rounded text-white
               px-8 py-3 text-sm mt-6 m-1 disabled:bg-gray-400 disabled:text-black">
                 Previous
             </button>
-            <button areal-label="Next" disabled={!seachedPosts.pageInfo.hasNextPage} className="hover:ring-2 hover:ring-offset-1
+            <button areal-label="Next" disabled={!seachedPosts.pageInfo?.hasNextPage}
+            onClick={handleNextButton}
+            className="hover:ring-2 hover:ring-offset-1
               font-semibold hover:ring-white focus:ring-white focus:ring-2 
               focus:ring-offset-1 focus:bg-black focus:outline-none hover:scale-95 
               w-full sm:w-auto bg-black transition duration-150 ease-in-out rounded
