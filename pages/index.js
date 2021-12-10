@@ -1,18 +1,18 @@
 import Head from "next/head";
 import { PostWidget, Categories, PostCard } from "../components";
-import { getPosts,getSearchResult } from "../services";
+import { getPost2,getSearchResult } from "../services";
 import { FeaturedPosts } from "../sections";
 import {useState,useEffect,useRef} from 'react'
 import _ from 'lodash'
 
-export default function Home() {
+export default function Home({posts}) {
   const [seachedPosts, setSeachedPosts] = useState([])
   const [skip, setSkip] = useState(0)
   const searchInputRef = useRef()
 
   
   useEffect(() => {
-    getSearchResult("",0).then((result)=>(setSeachedPosts(result)))
+    setSeachedPosts(posts)
     }, [])
   // console.log(seachedPosts)
     
@@ -104,7 +104,7 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getPost2()) || [];
   return {
     props: { posts },
   };

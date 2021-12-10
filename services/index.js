@@ -297,3 +297,43 @@ query MyQuery($searchValue:String!,$skip: Int) {
 
   return result.postsConnection;
 };
+
+export const getPost2 = async () => {
+  const query = gql`
+query MyQuery() {
+  postsConnection(first: 6, orderBy: createdAt_DESC) {
+    edges {
+      node {
+        author {
+          bio
+          id
+          name
+          photo {
+            url
+          }
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      pageSize
+    }
+  }
+}`;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection;
+};
