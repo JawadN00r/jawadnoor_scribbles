@@ -241,8 +241,8 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_ASC
-        last: 3
+        orderBy: createdAt_DESC
+        first: 3
       ) {
         title
         featuredImage {
