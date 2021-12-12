@@ -54,6 +54,21 @@ export const getCategories = async () => {
   return result.categories;
 };
 
+export const getFeaturedCategories = async () => {
+  const query = gql`
+    query GetGategories {
+      categories(where: {featuredCategory: true}) {
+        name
+        slug
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.categories;
+};
+
 export const getPostDetails = async (slug) => {
   const query = gql`
     query GetPostDetails($slug: String!) {
