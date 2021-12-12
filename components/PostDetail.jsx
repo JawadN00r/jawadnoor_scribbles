@@ -11,53 +11,81 @@ const PostDetail = ({ post }) => {
   // hljs.registerLanguage('java', java);
   // hljs.registerLanguage('cpp', cpp);
 
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
+  const getModifiedElement = (obj, index, modifiedText) => {
+    if (obj.type) {
+      return <React.Fragment key={index}>{obj.children.map((item, i) => (<React.Fragment key={i}>{getContentFragment(item, i)}</React.Fragment>))}</React.Fragment>;
+    } else {
+      return <React.Fragment key={index}>{modifiedText.map((item, i) => (<React.Fragment key={i}>{item}</React.Fragment>))}</React.Fragment>;
+    }
+  }
 
+  const getContentFragment = (obj, index) => {
+    let modifiedText = obj.text
     if (obj) {
       if (obj.bold) {
-        modifiedText = (<b key={index}>{text}</b>);
+        modifiedText = (<b key={index}>{obj.text}</b>);
       }
 
       if (obj.italic) {
-        modifiedText = (<em key={index}>{text}</em>);
+        modifiedText = (<em key={index}>{obj.text}</em>);
       }
 
       if (obj.underline) {
-        modifiedText = (<u key={index}>{text}</u>);
+        modifiedText = (<u key={index}>{obj.text}</u>);
       }
 
       if (obj.code) {
         modifiedText = (<code key={index}
           className="text-gray-800 bg-gray-100 mx-1 px-1.5 py-0.5
           rounded font-mono">
-          {text}
+          {obj.text}
         </code>)
       }
     }
 
-    switch (type) {
+    switch (obj.type) {
       case 'heading-one':
-        return <h1 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
+        return (<h1 key={index} className="text-xl font-semibold mb-4">
+          {getModifiedElement(obj, index, modifiedText)}
+        </h1>);
       case 'heading-three':
-        return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
-      case 'paragraph':
-        return <p key={index} className="mb-8 sm:text-sm lg:text-base">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return (<h3 key={index} className="text-xl font-semibold mb-4">
+          {getModifiedElement(obj, index, modifiedText)}
+        </h3>);
       case 'heading-four':
-        return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+        return (<h4 key={index} className="text-md font-semibold mb-4">
+          {getModifiedElement(obj, index, modifiedText)}
+        </h4>);
+      case 'paragraph':
+        return (<p key={index} className="mb-8 text-sm sm:text-base">
+          {getModifiedElement(obj, index, modifiedText)}
+        </p>);
+      case 'link':
+        return (<a key={index} href={obj.href} target={obj.openInNewTab ? "_blank" : "_self"} rel="noopener noreferrer" className="mb-8 text-sm sm:text-base">
+          {getModifiedElement(obj, index, modifiedText)}
+        </a>);
       case 'bulleted-list':
-        return <ul className="block list-disc my-4 mx-0 pl-10 sm:text-sm lg:text-base" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</ul>;
+        return (<ul className="block list-disc my-4 mx-0 pl-10 sm:text-sm lg:text-base" key={index}>
+          {getModifiedElement(obj, index, modifiedText)}
+        </ul>);
       case 'list-item':
-        return <li className="list-item" key={index}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</li>;
+        return (<li className="list-item" key={index}>
+          {getModifiedElement(obj, index, modifiedText)}
+        </li>);
       case 'list-item-child':
-        // console.log(obj)
-        return obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item)}</React.Fragment>);
+        return getModifiedElement(obj, index, modifiedText);
       case 'code-block':
-        return <pre key={index} className="my-8">
-          <code>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
+        return (<pre key={index} className="my-8">
+          <code>
+            {getModifiedElement(obj, index, modifiedText)}
+          </code>
+        </pre>);
       case 'class':
-        return <pre key={index}>
-          <code className={obj.className}>{obj.children.map((item, i) => <React.Fragment key={i}>{getContentFragment(i, item.text, item, item.type)}</React.Fragment>)}</code></pre>;
+        return (<pre key={index}>
+          <code className={obj.className}>
+            {getModifiedElement(obj, index, modifiedText)}
+          </code>
+        </pre>);
       case 'image':
         return (
           <img
@@ -110,10 +138,11 @@ const PostDetail = ({ post }) => {
           {post.title}
         </h1>
         {/* {console.log(post.content.raw)} */}
+        {/* <div className="max-w-2xl mx-auto post post-styles_post__1T0fC"> */}
         {post.content.raw.children.map((typeObj, index) => {
-          const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
-          return getContentFragment(index, children, typeObj, typeObj.type);
+          return getContentFragment(typeObj, index);
         })}
+        {/* </div> */}
       </div>
     </div>
   )
