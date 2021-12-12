@@ -65,7 +65,7 @@ const PostDetail = ({ post }) => {
           {getModifiedElement(obj, index, modifiedText)}
         </a>);
       case 'bulleted-list':
-        return (<ul className="block list-disc my-4 mx-0 pl-10 sm:text-sm lg:text-base" key={index}>
+        return (<ul className="block list-disc my-4 mx-0 pl-10 text-sm sm:text-base" key={index}>
           {getModifiedElement(obj, index, modifiedText)}
         </ul>);
       case 'list-item':
@@ -75,13 +75,15 @@ const PostDetail = ({ post }) => {
       case 'list-item-child':
         return getModifiedElement(obj, index, modifiedText);
       case 'code-block':
-        return (<pre key={index} className="my-8">
+        return (<pre key={index} className="my-8 block overflow-x-auto
+         bg-gray-100 text-sm sm:text-base">
           <code>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
         </pre>);
       case 'class':
-        return (<pre key={index}>
+        return (<pre key={index} className="my-8 block overflow-x-auto
+         bg-gray-100 text-sm sm:text-base">
           <code className={obj.className}>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
@@ -134,7 +136,7 @@ const PostDetail = ({ post }) => {
             </span>
           </div>
         </div>
-        <h1 className="mb-8 text-xl md:text-3xl font-semibold text-center">
+        <h1 className="mb-8 pt-4 text-xl md:text-3xl font-semibold text-center">
           {post.title}
         </h1>
         {/* {console.log(post.content.raw)} */}
