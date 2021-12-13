@@ -79,6 +79,7 @@ const CategoryPost = ({ posts,slug }) => {
               <PostCard key={index} post={post.node} />
             ))}
             {/* previous and next button */}
+            {seachedPosts.edges?.length &&
             <div className="flex justify-content absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
               <button areal-label="Previous" disabled={!seachedPosts.pageInfo?.hasPreviousPage}
               onClick={handlePreviousButton}
@@ -100,6 +101,7 @@ const CategoryPost = ({ posts,slug }) => {
                 Next
               </button>
             </div>
+            }
           </div>
           <div className="col-span-1 lg:col-span-4">
             <div className="relative lg:sticky top-8">

@@ -312,6 +312,7 @@ query MyQuery($searchValue:String!,$skip: Int) {
 
   return result.postsConnection;
 };
+
 export const getSearchResultOfCategory = async (searchValue,skip,category) => {
   const query = gql`
 query MyQuery($searchValue:String!,$skip: Int, $category:String!) {
