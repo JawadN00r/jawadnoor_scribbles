@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import _ from 'lodash'
 
-import { getCategories,getSearchResult } from "../../services";
+import { getCategories,getSearchResultOfCategory } from "../../services";
 import { PostCard, Categories, Loader } from "../../components";
 
 const CategoryPost = ({ posts,slug }) => {
@@ -20,7 +20,7 @@ const CategoryPost = ({ posts,slug }) => {
   useEffect(() => {
     const searchString = searchInputRef.current.value
     if(searchString) {
-      getSearchResult(searchString,0,slug).then(
+      getSearchResultOfCategory(searchString,0,slug).then(
         (result)=>(setSeachedPosts(result))
       )
       setSkip(0)
@@ -31,7 +31,7 @@ const CategoryPost = ({ posts,slug }) => {
 
   const handleSearch = (e) => {
     const searchString = searchInputRef.current.value
-    getSearchResult(searchString,0,slug).then(
+    getSearchResultOfCategory(searchString,0,slug).then(
       (result)=>(setSeachedPosts(result))
     )
     setSkip(0)
@@ -41,7 +41,7 @@ const CategoryPost = ({ posts,slug }) => {
     const newSkip = skip + 6
     setSkip(newSkip)
     const searchString = searchInputRef.current.value
-    getSearchResult(searchString,newSkip,slug).then(
+    getSearchResultOfCategory(searchString,newSkip,slug).then(
       (result)=>(setSeachedPosts(result))
     )
   }
@@ -50,7 +50,7 @@ const CategoryPost = ({ posts,slug }) => {
     const newSkip = Math.max(0,skip - 6)
     setSkip(newSkip)
     const searchString = searchInputRef.current.value
-    getSearchResult(searchString,newSkip,slug).then(
+    getSearchResultOfCategory(searchString,newSkip,slug).then(
       (result)=>(setSeachedPosts(result))
     )
   }
@@ -117,7 +117,7 @@ export default CategoryPost;
 export async function getStaticProps(props) {
   const { params } = props
   props.key = params.slug
-  const posts = await getSearchResult("",0,params.slug);
+  const posts = await getSearchResultOfCategory("",0,params.slug);
   const slug = params.slug
   return {
     props: { posts,slug },

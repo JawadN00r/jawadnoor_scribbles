@@ -19,7 +19,7 @@ export default function Home({posts}) {
   const handleSearch = (e) => {
     const searchString = searchInputRef.current.value
     // console.log(searchString)
-    getSearchResult(searchString,0,"").then(
+    getSearchResult(searchString,0).then(
       (result)=>(setSeachedPosts(result))
     )
     setSkip(0)
@@ -32,7 +32,7 @@ export default function Home({posts}) {
     // console.log(newSkip)
     const searchString = searchInputRef.current.value
     // console.log(searchString)
-    getSearchResult(searchString,newSkip,"").then(
+    getSearchResult(searchString,newSkip).then(
       (result)=>(setSeachedPosts(result))
     )
   }
@@ -44,7 +44,7 @@ export default function Home({posts}) {
     // console.log(newSkip)
     const searchString = searchInputRef.current.value
     // console.log(searchString)
-    getSearchResult(searchString,newSkip,"").then(
+    getSearchResult(searchString,newSkip).then(
       (result)=>(setSeachedPosts(result))
     )
   }
