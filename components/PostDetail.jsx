@@ -37,7 +37,8 @@ const PostDetail = ({ post }) => {
       if (obj.code) {
         modifiedText = (<code key={index}
           className="text-gray-800 bg-gray-100 mx-1 px-1.5 py-0.5
-          rounded font-mono">
+        rounded font-mono"
+        >
           {obj.text}
         </code>)
       }
@@ -45,45 +46,63 @@ const PostDetail = ({ post }) => {
 
     switch (obj.type) {
       case 'heading-one':
-        return (<h1 key={index} className="text-xl font-semibold mb-4">
+        return (<h1 key={index}
+          className="text-xl font-semibold mb-4"
+        >
           {getModifiedElement(obj, index, modifiedText)}
         </h1>);
       case 'heading-three':
-        return (<h3 key={index} className="text-xl font-semibold mb-4">
+        return (<h3 key={index}
+          className="text-xl font-semibold mb-4"
+        >
           {getModifiedElement(obj, index, modifiedText)}
         </h3>);
       case 'heading-four':
-        return (<h4 key={index} className="text-md font-semibold mb-4">
+        return (<h4 key={index}
+          className="text-md font-semibold mb-4"
+        >
           {getModifiedElement(obj, index, modifiedText)}
         </h4>);
       case 'paragraph':
-        return (<p key={index} className="mb-8 text-sm sm:text-base">
+        return (<p key={index}
+          className="mb-8 text-sm sm:text-base"
+        >
           {getModifiedElement(obj, index, modifiedText)}
         </p>);
       case 'link':
-        return (<a key={index} href={obj.href} target={obj.openInNewTab ? "_blank" : "_self"} rel="noopener noreferrer" className="mb-8 text-sm sm:text-base">
+        return (<a key={index} href={obj.href} target={obj.openInNewTab ? "_blank" : "_self"} rel="noopener noreferrer"
+          className="mb-8 text-sm sm:text-base"
+        >
           {getModifiedElement(obj, index, modifiedText)}
         </a>);
       case 'bulleted-list':
-        return (<ul className="block list-disc my-4 mx-0 pl-10 text-sm sm:text-base" key={index}>
+        return (<ul
+          className="block list-disc my-4 mx-0 pl-10 text-sm sm:text-base"
+          key={index}>
           {getModifiedElement(obj, index, modifiedText)}
         </ul>);
       case 'list-item':
-        return (<li className="list-item" key={index}>
+        return (<li
+          className="list-item"
+          key={index}>
           {getModifiedElement(obj, index, modifiedText)}
         </li>);
       case 'list-item-child':
         return getModifiedElement(obj, index, modifiedText);
       case 'code-block':
-        return (<pre key={index} className="my-8 block overflow-x-auto
-         bg-gray-100 text-sm sm:text-base">
+        return (<pre key={index}
+          className="my-8 block overflow-x-auto
+         bg-gray-100 text-sm sm:text-base"
+        >
           <code>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
         </pre>);
       case 'class':
-        return (<pre key={index} className="my-8 block overflow-x-auto
-         bg-gray-100 text-sm sm:text-base">
+        return (<pre key={index}
+          className="my-8 block overflow-x-auto
+         bg-gray-100 text-sm sm:text-base"
+        >
           <code className={obj.className}>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
