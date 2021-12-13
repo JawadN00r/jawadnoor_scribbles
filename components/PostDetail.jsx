@@ -94,7 +94,7 @@ const PostDetail = ({ post }) => {
           className="my-8 block overflow-x-auto
          bg-gray-100 text-sm sm:text-base"
         >
-          <code>
+          <code key={index}>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
         </pre>);
@@ -103,7 +103,7 @@ const PostDetail = ({ post }) => {
           className="my-8 block overflow-x-auto
          bg-gray-100 text-sm sm:text-base"
         >
-          <code className={obj.className}>
+          <code key={index} className={obj.className}>
             {getModifiedElement(obj, index, modifiedText)}
           </code>
         </pre>);
@@ -118,12 +118,12 @@ const PostDetail = ({ post }) => {
           />
         );
       default:
-        return modifiedText;
+        return <React.Fragment key={index}>{modifiedText}</React.Fragment>;
     }
   };
   useEffect(() => {
     hljs.highlightAll();
-  }, []);
+  }, [post.slug]);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8
      pb-12 mb-8">
@@ -160,10 +160,11 @@ const PostDetail = ({ post }) => {
         </h1>
         {/* {console.log(post.content.raw)} */}
         {/* <div className="max-w-2xl mx-auto post post-styles_post__1T0fC"> */}
-        {post.content.raw.children.map((typeObj, index) => {
-          return getContentFragment(typeObj, index);
-        })}
-        {/* </div> */}
+        <div key={post.slug}>
+          {post.content.raw.children.map((typeObj, index) => {
+            return getContentFragment(typeObj, index);
+          })}
+        </div>
       </div>
     </div>
   )
