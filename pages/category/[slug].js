@@ -18,8 +18,16 @@ const CategoryPost = ({ posts,slug }) => {
   const searchInputRef = useRef()
 
   useEffect(() => {
-    setSeachedPosts(posts)
-    }, [])
+    const searchString = searchInputRef.current.value
+    if(searchString) {
+      getSearchResult(searchString,0,slug).then(
+        (result)=>(setSeachedPosts(result))
+      )
+      setSkip(0)
+    } else {
+      setSeachedPosts(posts)
+    }
+    }, [slug])
 
   const handleSearch = (e) => {
     const searchString = searchInputRef.current.value
@@ -106,7 +114,9 @@ const CategoryPost = ({ posts,slug }) => {
 export default CategoryPost;
 
 // Fetch data at build time
-export async function getStaticProps({ params }) {
+export async function getStaticProps(props) {
+  const { params } = props
+  props.key = params.slug
   const posts = await getSearchResult("",0,params.slug);
   const slug = params.slug
 
