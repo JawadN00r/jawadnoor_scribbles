@@ -56,7 +56,7 @@ export default PostDetails;
 export async function getStaticProps(props) {
   const { params } = props
   props.key = params.slug
-  console.log(props.key)
+  // console.log(props.key)
   const data = await getPostDetails(params.slug);
   return {
     props: {
