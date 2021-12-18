@@ -123,6 +123,7 @@ export async function getStaticProps(props) {
   const slug = params.slug
   return {
     props: { posts,slug },
+    revalidate:60
   };
 }
 
