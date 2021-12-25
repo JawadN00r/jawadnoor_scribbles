@@ -70,7 +70,7 @@ a {
   box-sizing: border-box;
 }
 
-@-webkit-keyframes aitf {
+@keyframes aitf {
   0% {
     background-position: 0% 50%;
   }
@@ -79,6 +79,39 @@ a {
     background-position: 100% 50%;
   }
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  33% {
+    background-position: 33% 50%;
+  }
+
+  66% {
+    background-position: 66% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 
 #hh {
   // text-transform: uppercase;
@@ -95,22 +128,42 @@ a {
 
   /* Clip Background Image */
 
-  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-  -webkit-background-clip: text;
+  // background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  // background: url(../public/gradient_img_1.png) repeat-y;
+  /* ff 3.6+ */
+  // background: -moz-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  // background: -webkit-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
+
+  /* opera 11.10+ */
+  // background: -o-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
+
+  /* ie 6-9 */
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#22CFBA', endColorstr='#FD565A', GradientType=0);
+
+  /* ie 10+ */
+  // background: -ms-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%) repeat-y;
+  // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) repeat-y;
   background-clip: text;
-
-  /* Animate Background Image */
-
   -webkit-text-fill-color: transparent;
+
+  @media (min-width: 768px) {
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+  }
+
   // -webkit-animation: aitf 80s linear infinite;
-  animation: aitf 100s linear infinite;
 
   /* Activate hardware acceleration for smoother animations */
 
   // -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  // transform: translate3d(0, 0, 0);
   // -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  // backface-visibility: hidden;
 
 }
 
