@@ -99,13 +99,25 @@ a {
     background-position: 0% 50%;
   }
 
-  33% {
-    background-position: 33% 50%;
+  // 15% {
+  //   background-position: 15% 50%;
+  // }
+
+  // 33% {
+  //   background-position: 33% 50%;
+  // }
+
+  50% {
+    background-position: 50% 50%;
   }
 
-  66% {
-    background-position: 66% 50%;
-  }
+  // 67% {
+  //   background-position: 67% 50%;
+  // }
+
+  // 84% {
+  //   background-position: 84% 50%;
+  // }
 
   100% {
     background-position: 100% 50%;
@@ -152,8 +164,13 @@ a {
   -webkit-text-fill-color: transparent;
 
   @media (min-width: 768px) {
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
+    background: linear-gradient(90deg, #FD565A 0%, #BC52E4 15%, #27AAEC 33%, #22CFBA 50%, #27AAEC 67%, #BC52E4 84%, #FD565A 100%) repeat-y;
+    animation: gradient1 30s linear infinite;
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // transform: translate3d(0, 0, 0);
+    // backface-visibility: hidden;
   }
 
   // -webkit-animation: aitf 80s linear infinite;
