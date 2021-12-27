@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css');
 // @import url('https://jmblog.github.io/color-themes-for-highlightjs/css/themes/tomorrow.css');
 
@@ -80,6 +83,21 @@ a {
   }
 }
 
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -94,40 +112,11 @@ a {
   }
 }
 
-@keyframes gradient1 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  // 15% {
-  //   background-position: 15% 50%;
-  // }
-
-  // 33% {
-  //   background-position: 33% 50%;
-  // }
-
-  50% {
-    background-position: 50% 50%;
-  }
-
-  // 67% {
-  //   background-position: 67% 50%;
-  // }
-
-  // 84% {
-  //   background-position: 84% 50%;
-  // }
-
-  100% {
-    background-position: 100% 50%;
-  }
-}
 
 
 #hh {
   // text-transform: uppercase;
-  font-family: 'Fuzzy Bubbles', cursive;
+  font-family: 'Permanent Marker', cursive;
   // border: 4px double rgba(255, 255, 255, .25);
   // border-width: 4px 0;
 
@@ -138,41 +127,6 @@ a {
   // margin: 0 auto;
   text-shadow: 0 0 80px rgba(255, 255, 255, .5);
 
-  /* Clip Background Image */
-
-  // background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-  // background: url(../public/gradient_img_1.png) repeat-y;
-  /* ff 3.6+ */
-  // background: -moz-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
-
-  /* safari 5.1+,chrome 10+ */
-  // background: -webkit-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
-
-  /* opera 11.10+ */
-  // background: -o-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
-
-  /* ie 6-9 */
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#22CFBA', endColorstr='#FD565A', GradientType=0);
-
-  /* ie 10+ */
-  // background: -ms-linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%);
-
-  /* global 94%+ browsers support */
-  background: linear-gradient(90deg, #FD565A 0%, #BC52E4 33%, #27AAEC 66%, #22CFBA 100%) repeat-y;
-  // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) repeat-y;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @media (min-width: 768px) {
-    background: linear-gradient(90deg, #FD565A 0%, #BC52E4 15%, #27AAEC 33%, #22CFBA 50%, #27AAEC 67%, #BC52E4 84%, #FD565A 100%) repeat-y;
-    animation: gradient1 30s linear infinite;
-    background-size: 200% 100%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    // transform: translate3d(0, 0, 0);
-    // backface-visibility: hidden;
-  }
-
   // -webkit-animation: aitf 80s linear infinite;
 
   /* Activate hardware acceleration for smoother animations */
@@ -181,6 +135,16 @@ a {
   // transform: translate3d(0, 0, 0);
   // -webkit-backface-visibility: hidden;
   // backface-visibility: hidden;
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-color: #FE5A59;
+  background-image: linear-gradient(45deg, #ffffff 40%, #FB408F 60%, #FAE937 75%, #ffffff 100%);
+  ;
+  -webkit-animation: gradient 4s ease both infinite;
+  animation: gradient 4s ease both infinite;
 
 }
 
