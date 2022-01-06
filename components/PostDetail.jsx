@@ -159,7 +159,7 @@ const PostDetail = ({ post }) => {
           {post.title}
         </h1>
         {/* {console.log(post.content.raw)} */}
-        {/* <div className="max-w-2xl mx-auto post post-styles_post__1T0fC"> */}
+        {/* <div className="max-w-2xl mx-auto post post-styles_post"> */}
         <div key={post.slug}>
           {post.content.raw.children.map((typeObj, index) => {
             return getContentFragment(typeObj, index);
