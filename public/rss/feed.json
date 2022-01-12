@@ -1,0 +1,505 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "JawadAsif's Scribbles",
+    "home_page_url": "https://blog.jawadasif.vercel.app",
+    "feed_url": "https://blog.jawadasif.vercel.app/rss/feed.json",
+    "icon": "https://blog.jawadasif.vercel.app/vercel.svg",
+    "author": {
+        "name": "Md Jawad Noor Asif",
+        "url": "https://jawadasif.vercel.app"
+    },
+    "items": [
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/product-of-array-except-self",
+            "content_html": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in O(n) time and without using the division operation.",
+            "url": "https://blog.jawadasif.vercel.app/post/product-of-array-except-self",
+            "title": "238. Product of Array Except Self",
+            "summary": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in O(n) time and without using the division operation.",
+            "date_modified": "2021-11-27T05:29:44.442Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/search-insert-position",
+            "content_html": "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+            "url": "https://blog.jawadasif.vercel.app/post/search-insert-position",
+            "title": "35. Search Insert Position",
+            "summary": "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+            "date_modified": "2021-11-27T15:00:11.159Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/house-robber-iii",
+            "content_html": "The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.\n\nBesides the root, each house has one and only one parent house. After a tour, the smart thief realized that all houses in this place form a binary tree. It will automatically contact the police if two directly-linked houses were broken into on the same night.\n\nGiven the root of the binary tree, return the maximum amount of money the thief can rob without alerting the police.",
+            "url": "https://blog.jawadasif.vercel.app/post/house-robber-iii",
+            "title": "337. House Robber III",
+            "summary": "The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.\n\nBesides the root, each house has one and only one parent house. After a tour, the smart thief realized that all houses in this place form a binary tree. It will automatically contact the police if two directly-linked houses were broken into on the same night.\n\nGiven the root of the binary tree, return the maximum amount of money the thief can rob without alerting the police.",
+            "date_modified": "2021-12-05T10:35:00.251Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/minimum-cost-to-move-chips-to-the-same-position",
+            "content_html": "We have n chips, where the position of the ith chip is position[i]. We need to move all the chips to the same position. \nReturn the minimum cost needed to move all the chips to the same position.",
+            "url": "https://blog.jawadasif.vercel.app/post/minimum-cost-to-move-chips-to-the-same-position",
+            "title": "1217. Minimum Cost to Move Chips to The Same Position",
+            "summary": "We have n chips, where the position of the ith chip is position[i]. We need to move all the chips to the same position. \nReturn the minimum cost needed to move all the chips to the same position.",
+            "date_modified": "2021-12-06T10:49:40.145Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/convert-binary-number-in-a-linked-list-to-integer",
+            "content_html": "Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either 0 or 1. The linked list holds the binary representation of a number.\n\nReturn the decimal value of the number in the linked list.",
+            "url": "https://blog.jawadasif.vercel.app/post/convert-binary-number-in-a-linked-list-to-integer",
+            "title": "1290. Convert Binary Number in a Linked List to Integer",
+            "summary": "Given head which is a reference node to a singly-linked list. The value of each node in the linked list is either 0 or 1. The linked list holds the binary representation of a number.\n\nReturn the decimal value of the number in the linked list.",
+            "date_modified": "2021-12-07T04:03:21.576Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/binary-tree-tilt",
+            "content_html": "Given the root of a binary tree, return the sum of every tree node's tilt.\n\nThe tilt of a tree node is the absolute difference between the sum of all left subtree node values and all right subtree node values. If a node does not have a left child, then the sum of the left subtree node values is treated as 0. The rule is similar if there the node does not have a right child.",
+            "url": "https://blog.jawadasif.vercel.app/post/binary-tree-tilt",
+            "title": "563. Binary Tree Tilt",
+            "summary": "Given the root of a binary tree, return the sum of every tree node's tilt.\n\nThe tilt of a tree node is the absolute difference between the sum of all left subtree node values and all right subtree node values. If a node does not have a left child, then the sum of the left subtree node values is treated as 0. The rule is similar if there the node does not have a right child.",
+            "date_modified": "2021-12-08T04:50:39.559Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/jump-game-iii",
+            "content_html": "Given an array of non-negative integers arr, you are initially positioned at start index of the array. When you are at index i, you can jump to i + arr[i] or i - arr[i], check if you can reach to any index with value 0.\n\nNotice that you can not jump outside of the array at any time.",
+            "url": "https://blog.jawadasif.vercel.app/post/jump-game-iii",
+            "title": "1306. Jump Game III",
+            "summary": "Given an array of non-negative integers arr, you are initially positioned at start index of the array. When you are at index i, you can jump to i + arr[i] or i - arr[i], check if you can reach to any index with value 0.\n\nNotice that you can not jump outside of the array at any time.",
+            "date_modified": "2021-12-09T04:47:08.427Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/domino-and-tromino-tiling",
+            "content_html": "You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes. Given an integer n, return the number of ways to tile an 2 x n board. Since the answer may be very large, return it modulo 10^9 + 7.",
+            "url": "https://blog.jawadasif.vercel.app/post/domino-and-tromino-tiling",
+            "title": "790. Domino and Tromino Tiling",
+            "summary": "You have two types of tiles: a 2 x 1 domino shape and a tromino shape. You may rotate these shapes. Given an integer n, return the number of ways to tile an 2 x n board. Since the answer may be very large, return it modulo 10^9 + 7.",
+            "date_modified": "2021-12-10T05:45:02.606Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/nth-magical-number",
+            "content_html": "A positive integer is magical if it is divisible by either a or b.\n\nGiven the three integers n, a, and b, return the nth magical number. Since the answer may be very large, return it modulo 10^9 + 7.",
+            "url": "https://blog.jawadasif.vercel.app/post/nth-magical-number",
+            "title": "878. Nth Magical Number",
+            "summary": "A positive integer is magical if it is divisible by either a or b.\n\nGiven the three integers n, a, and b, return the nth magical number. Since the answer may be very large, return it modulo 10^9 + 7.",
+            "date_modified": "2021-12-11T05:59:18.130Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/partition-equal-subset-sum",
+            "content_html": "Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
+            "url": "https://blog.jawadasif.vercel.app/post/partition-equal-subset-sum",
+            "title": "416. Partition Equal Subset Sum",
+            "summary": "Given a non-empty array nums containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.",
+            "date_modified": "2021-12-12T04:30:24.293Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/consecutive-characters",
+            "content_html": "The power of the string is the maximum length of a non-empty substring that contains only one unique character.\n\nGiven a string s, return the power of s.",
+            "url": "https://blog.jawadasif.vercel.app/post/consecutive-characters",
+            "title": "1446. Consecutive Characters",
+            "summary": "The power of the string is the maximum length of a non-empty substring that contains only one unique character.\n\nGiven a string s, return the power of s.",
+            "date_modified": "2021-12-13T04:29:05.877Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/range-sum-of-bst",
+            "content_html": "Given the root node of a binary search tree and two integers low and high, return the sum of values of all nodes with a value in the inclusive range [low, high].",
+            "url": "https://blog.jawadasif.vercel.app/post/range-sum-of-bst",
+            "title": "938. Range Sum of BST",
+            "summary": "Given the root node of a binary search tree and two integers low and high, return the sum of values of all nodes with a value in the inclusive range [low, high].",
+            "date_modified": "2021-12-14T05:23:38.662Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/insertion-sort-list",
+            "content_html": "Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.",
+            "url": "https://blog.jawadasif.vercel.app/post/insertion-sort-list",
+            "title": "147. Insertion Sort List",
+            "summary": "Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.",
+            "date_modified": "2021-12-15T05:06:15.189Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/minimum-height-trees",
+            "content_html": "Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [ai, bi] indicates that there is an undirected edge between the two nodes ai and bi in the tree, you can choose any node of the tree as the root. When you select a node x as the root, the result tree has height h. Among all possible rooted trees, those with minimum height (i.e. min(h))  are called minimum height trees (MHTs).",
+            "url": "https://blog.jawadasif.vercel.app/post/minimum-height-trees",
+            "title": "310. Minimum Height Trees",
+            "summary": "Given a tree of n nodes labelled from 0 to n - 1, and an array of n - 1 edges where edges[i] = [ai, bi] indicates that there is an undirected edge between the two nodes ai and bi in the tree, you can choose any node of the tree as the root. When you select a node x as the root, the result tree has height h. Among all possible rooted trees, those with minimum height (i.e. min(h))  are called minimum height trees (MHTs).",
+            "date_modified": "2021-12-16T05:50:43.822Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/maximal-square",
+            "content_html": "Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.",
+            "url": "https://blog.jawadasif.vercel.app/post/maximal-square",
+            "title": "221. Maximal Square",
+            "summary": "Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.",
+            "date_modified": "2021-12-17T06:14:22.931Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/numbers-at-most-n-given-digit-set",
+            "content_html": "Given an array of digits which is sorted in non-decreasing order. You can write numbers using each digits[i] as many times as we want. For example, if digits = ['1','3','5'], we may write numbers such as '13', '551', and '1351315'.\n\nReturn the number of positive integers that can be generated that are less than or equal to a given integer n.",
+            "url": "https://blog.jawadasif.vercel.app/post/numbers-at-most-n-given-digit-set",
+            "title": "902. Numbers At Most N Given Digit Set",
+            "summary": "Given an array of digits which is sorted in non-decreasing order. You can write numbers using each digits[i] as many times as we want. For example, if digits = ['1','3','5'], we may write numbers such as '13', '551', and '1351315'.\n\nReturn the number of positive integers that can be generated that are less than or equal to a given integer n.",
+            "date_modified": "2021-12-18T03:05:46.714Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/decode-string",
+            "content_html": "Given an encoded string, return its decoded string.\n\nThe encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.",
+            "url": "https://blog.jawadasif.vercel.app/post/decode-string",
+            "title": "394. Decode String",
+            "summary": "Given an encoded string, return its decoded string.\n\nThe encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.",
+            "date_modified": "2021-12-19T04:38:45.408Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/minimum-absolute-difference",
+            "content_html": "Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements. ",
+            "url": "https://blog.jawadasif.vercel.app/post/minimum-absolute-difference",
+            "title": "1200. Minimum Absolute Difference",
+            "summary": "Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements. ",
+            "date_modified": "2021-12-20T04:29:19.547Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/power-of-two",
+            "content_html": "Given an integer n, return true if it is a power of two. Otherwise, return false.\n\nAn integer n is a power of two, if there exists an integer x such that n == 2^x.",
+            "url": "https://blog.jawadasif.vercel.app/post/power-of-two",
+            "title": "231. Power of Two",
+            "summary": "Given an integer n, return true if it is a power of two. Otherwise, return false.\n\nAn integer n is a power of two, if there exists an integer x such that n == 2^x.",
+            "date_modified": "2021-12-21T05:34:08.807Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/reorder-list",
+            "content_html": "You are given the head of a singly linked-list. The list can be represented as:\n\nL0 → L1 → … → Ln - 1 → Ln\nReorder the list to be on the following form:\n\nL0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …\nYou may not modify the values in the list's nodes. Only nodes themselves may be changed.",
+            "url": "https://blog.jawadasif.vercel.app/post/reorder-list",
+            "title": "143. Reorder List",
+            "summary": "You are given the head of a singly linked-list. The list can be represented as:\n\nL0 → L1 → … → Ln - 1 → Ln\nReorder the list to be on the following form:\n\nL0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …\nYou may not modify the values in the list's nodes. Only nodes themselves may be changed.",
+            "date_modified": "2021-12-22T05:32:55.193Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/course-schedule-ii",
+            "content_html": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.\n\nFor example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.\nReturn the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.",
+            "url": "https://blog.jawadasif.vercel.app/post/course-schedule-ii",
+            "title": "210. Course Schedule II",
+            "summary": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.\n\nFor example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.\nReturn the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.",
+            "date_modified": "2021-12-23T04:55:29.730Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/merge-intervals",
+            "content_html": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+            "url": "https://blog.jawadasif.vercel.app/post/merge-intervals",
+            "title": "56. Merge Intervals",
+            "summary": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+            "date_modified": "2021-12-24T04:28:08.271Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/basic-calculator-ii",
+            "content_html": "Given a string s which represents an expression, evaluate this expression and return its value.",
+            "url": "https://blog.jawadasif.vercel.app/post/basic-calculator-ii",
+            "title": "227. Basic Calculator II",
+            "summary": "Given a string s which represents an expression, evaluate this expression and return its value.",
+            "date_modified": "2021-12-25T05:41:26.441Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/k-closest-points-to-origin",
+            "content_html": "Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).",
+            "url": "https://blog.jawadasif.vercel.app/post/k-closest-points-to-origin",
+            "title": "973. K Closest Points to Origin",
+            "summary": "Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).",
+            "date_modified": "2021-12-26T03:41:24.026Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/number-complement",
+            "content_html": "The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation. For example, The integer 5 is \"101\" in binary and its complement is \"010\" which is the integer 2.\nGiven an integer num, return its complement.",
+            "url": "https://blog.jawadasif.vercel.app/post/number-complement",
+            "title": "476. Number Complement",
+            "summary": "The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation. For example, The integer 5 is \"101\" in binary and its complement is \"010\" which is the integer 2.\nGiven an integer num, return its complement.",
+            "date_modified": "2021-12-27T04:57:57.565Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/middle-of-the-linked-list",
+            "content_html": "Given the head of a singly linked list, return the middle node of the linked list.\nIf there are two middle nodes, return the second middle node.",
+            "url": "https://blog.jawadasif.vercel.app/post/middle-of-the-linked-list",
+            "title": "876. Middle of the Linked List",
+            "summary": "Given the head of a singly linked list, return the middle node of the linked list.\nIf there are two middle nodes, return the second middle node.",
+            "date_modified": "2021-12-28T03:51:51.396Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/populating-next-right-pointers-in-each-node",
+            "content_html": "You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.",
+            "url": "https://blog.jawadasif.vercel.app/post/populating-next-right-pointers-in-each-node",
+            "title": "116. Populating Next Right Pointers in Each Node",
+            "summary": "You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.",
+            "date_modified": "2021-12-29T04:45:37.956Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/smallest-integer-divisible-by-k",
+            "content_html": "Given a positive integer k, you need to find the length of the smallest positive integer n such that n is divisible by k, and n only contains the digit 1.\nReturn the length of n. If there is no such n, return -1.",
+            "url": "https://blog.jawadasif.vercel.app/post/smallest-integer-divisible-by-k",
+            "title": "1015. Smallest Integer Divisible by K",
+            "summary": "Given a positive integer k, you need to find the length of the smallest positive integer n such that n is divisible by k, and n only contains the digit 1.\nReturn the length of n. If there is no such n, return -1.",
+            "date_modified": "2021-12-30T05:53:11.155Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/maximum-difference-between-node-and-ancestor",
+            "content_html": "Given the root of a binary tree, find the maximum value v for which there exist different nodes a and b where v = |a.val - b.val| and a is an ancestor of b.\nA node a is an ancestor of b if either: any child of a is equal to b or any child of a is an ancestor of b.",
+            "url": "https://blog.jawadasif.vercel.app/post/maximum-difference-between-node-and-ancestor",
+            "title": "1026. Maximum Difference Between Node and Ancestor",
+            "summary": "Given the root of a binary tree, find the maximum value v for which there exist different nodes a and b where v = |a.val - b.val| and a is an ancestor of b.\nA node a is an ancestor of b if either: any child of a is equal to b or any child of a is an ancestor of b.",
+            "date_modified": "2021-12-31T04:07:01.824Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/burst-balloons",
+            "content_html": "You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.\n\nIf you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.\n\nReturn the maximum coins you can collect by bursting the balloons wisely.",
+            "url": "https://blog.jawadasif.vercel.app/post/burst-balloons",
+            "title": "312. Burst Balloons",
+            "summary": "You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.\n\nIf you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.\n\nReturn the maximum coins you can collect by bursting the balloons wisely.",
+            "date_modified": "2022-01-01T05:38:09.978Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/pairs-of-songs-with-total-durations-divisible-by-60",
+            "content_html": "You are given a list of songs where the ith song has a duration of time[i] seconds.\n\nReturn the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i < j with (time[i] + time[j]) % 60 == 0.",
+            "url": "https://blog.jawadasif.vercel.app/post/pairs-of-songs-with-total-durations-divisible-by-60",
+            "title": "1010. Pairs of Songs With Total Durations Divisible by 60",
+            "summary": "You are given a list of songs where the ith song has a duration of time[i] seconds.\n\nReturn the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i < j with (time[i] + time[j]) % 60 == 0.",
+            "date_modified": "2022-01-02T05:09:08.653Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/find-the-town-judge",
+            "content_html": "In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.",
+            "url": "https://blog.jawadasif.vercel.app/post/find-the-town-judge",
+            "title": "997. Find the Town Judge",
+            "summary": "In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.",
+            "date_modified": "2022-01-03T05:21:57.540Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/complement-of-base-10-integer",
+            "content_html": "The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.\n\nFor example, The integer 5 is \"101\" in binary and its complement is \"010\" which is the integer 2.\nGiven an integer n, return its complement.",
+            "url": "https://blog.jawadasif.vercel.app/post/complement-of-base-10-integer",
+            "title": "1009. Complement of Base 10 Integer",
+            "summary": "The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.\n\nFor example, The integer 5 is \"101\" in binary and its complement is \"010\" which is the integer 2.\nGiven an integer n, return its complement.",
+            "date_modified": "2022-01-04T04:38:34.601Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/palindrome-partitioning",
+            "content_html": "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.\n\nA palindrome string is a string that reads the same backward as forward.",
+            "url": "https://blog.jawadasif.vercel.app/post/palindrome-partitioning",
+            "title": "131. Palindrome Partitioning",
+            "summary": "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.\n\nA palindrome string is a string that reads the same backward as forward.",
+            "date_modified": "2022-01-05T04:27:16.904Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/car-pooling",
+            "content_html": "There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).\n\nYou are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.\n\nReturn true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.",
+            "url": "https://blog.jawadasif.vercel.app/post/car-pooling",
+            "title": "1094. Car Pooling",
+            "summary": "There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).\n\nYou are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.\n\nReturn true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.",
+            "date_modified": "2022-01-06T05:13:30.999Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/linked-list-random-node",
+            "content_html": "Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.",
+            "url": "https://blog.jawadasif.vercel.app/post/linked-list-random-node",
+            "title": "382. Linked List Random Node",
+            "summary": "Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.",
+            "date_modified": "2022-01-07T08:28:41.275Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/cherry-pickup-ii",
+            "content_html": "You are given a rows x cols matrix grid representing a field of cherries where grid[i][j] represents the number of cherries that you can collect from the (i, j) cell.\nYou have two robots that can collect cherries for you.\nReturn the maximum number of cherries collection using both robots by following the rules.",
+            "url": "https://blog.jawadasif.vercel.app/post/cherry-pickup-ii",
+            "title": "1463. Cherry Pickup II",
+            "summary": "You are given a rows x cols matrix grid representing a field of cherries where grid[i][j] represents the number of cherries that you can collect from the (i, j) cell.\nYou have two robots that can collect cherries for you.\nReturn the maximum number of cherries collection using both robots by following the rules.",
+            "date_modified": "2022-01-08T03:38:07.973Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/robot-bounded-in-circle",
+            "content_html": "On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions. The robot performs the instructions given in order, and repeats them forever.\nReturn true if and only if there exists a circle in the plane such that the robot never leaves the circle.",
+            "url": "https://blog.jawadasif.vercel.app/post/robot-bounded-in-circle",
+            "title": "1041. Robot Bounded In Circle",
+            "summary": "On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions. The robot performs the instructions given in order, and repeats them forever.\nReturn true if and only if there exists a circle in the plane such that the robot never leaves the circle.",
+            "date_modified": "2022-01-09T06:42:21.012Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/add-binary",
+            "content_html": "Given two binary strings a and b, return their sum as a binary string.",
+            "url": "https://blog.jawadasif.vercel.app/post/add-binary",
+            "title": "67. Add Binary",
+            "summary": "Given two binary strings a and b, return their sum as a binary string.",
+            "date_modified": "2022-01-10T03:35:44.978Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/sum-of-root-to-leaf-binary-numbers",
+            "content_html": "You are given the root of a binary tree where each node has a value 0 or 1. Each root-to-leaf path represents a binary number starting with the most significant bit.\n\nFor example, if the path is 0 -> 1 -> 1 -> 0 -> 1, then this could represent 01101 in binary, which is 13.\nFor all leaves in the tree, consider the numbers represented by the path from the root to that leaf. Return the sum of these numbers.\n\nThe test cases are generated so that the answer fits in a 32-bits integer.",
+            "url": "https://blog.jawadasif.vercel.app/post/sum-of-root-to-leaf-binary-numbers",
+            "title": "1022. Sum of Root To Leaf Binary Numbers",
+            "summary": "You are given the root of a binary tree where each node has a value 0 or 1. Each root-to-leaf path represents a binary number starting with the most significant bit.\n\nFor example, if the path is 0 -> 1 -> 1 -> 0 -> 1, then this could represent 01101 in binary, which is 13.\nFor all leaves in the tree, consider the numbers represented by the path from the root to that leaf. Return the sum of these numbers.\n\nThe test cases are generated so that the answer fits in a 32-bits integer.",
+            "date_modified": "2022-01-11T04:16:43.288Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        },
+        {
+            "id": "https://blog.jawadasif.vercel.app/post/insert-into-a-binary-search-tree",
+            "content_html": "You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.",
+            "url": "https://blog.jawadasif.vercel.app/post/insert-into-a-binary-search-tree",
+            "title": "701. Insert into a Binary Search Tree",
+            "summary": "You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.",
+            "date_modified": "2022-01-12T04:21:11.534Z",
+            "author": {
+                "name": "Md Jawad Noor Asif",
+                "url": "https://jawadasif.vercel.app"
+            }
+        }
+    ]
+}

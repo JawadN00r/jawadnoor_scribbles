@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { PostWidget, Categories, PostCard } from "../components";
-import { getPost2,getSearchResult } from "../services";
+import { getPost2,getSearchResult,getPosts } from "../services";
 import { FeaturedPosts } from "../sections";
 import {useState,useEffect,useRef} from 'react'
 import _ from 'lodash'
+import { Feed } from "feed";
+import fs from "fs";
 
 export default function Home({posts}) {
   const [seachedPosts, setSeachedPosts] = useState([])
@@ -70,6 +72,7 @@ export default function Home({posts}) {
           {seachedPosts.edges?.map((post, index) => (
             <PostCard post={post.node} key={post.node.title} />
           ))}
+          {/* {console.log(posts.edges)} */}
           <div className="flex justify-content absolute bottom-0 left-1/2 transform -translate-x-1/2 ">
             <button areal-label="Previous" disabled={!seachedPosts.pageInfo?.hasPreviousPage}
             onClick={handlePreviousButton}
@@ -103,8 +106,57 @@ export default function Home({posts}) {
   );
 }
 
+const generateRSSFeed = async()=>{
+  const posts = await getPosts();
+  const siteURL = "https://blog.jawadasif.vercel.app";
+  const date = new Date();
+  const author = {
+    name: "Md Jawad Noor Asif",
+    email: "jawad.asif.bd@gmail.com",
+    link: "https://jawadasif.vercel.app",
+  };
+  const feed = new Feed({
+    title: "JawadAsif's Scribbles",
+    description: "",
+    id: siteURL,
+    link: siteURL,
+    image: `${siteURL}/vercel.svg`,
+    favicon: `${siteURL}/favicon.ico`,
+    copyright: `All rights reserved ${date.getFullYear()}, Md. Jawad Noor Asif`,
+    updated: date,
+    generator: "Feed for Node.js",
+    feedLinks: {
+      rss2: `${siteURL}/rss/feed.xml`,
+      json: `${siteURL}/rss/feed.json`,
+      atom: `${siteURL}/rss/atom.xml`,
+    },
+    author,
+  });
+  // console.log(posts);
+  posts.forEach((post) => {
+    post = post.node
+    // console.log(post)
+    const url = `${siteURL}/post/${post.slug}`;
+    feed.addItem({
+      title: post.title,
+      id: url,
+      link: url,
+      description: post.excerpt,
+      content: post.excerpt,
+      author: [author],
+      contributor: [author],
+      date: new Date(post.createdAt),
+    });
+  });
+  fs.mkdirSync("./public/rss", { recursive: true });
+  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
+  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
+  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+}
+
 export async function getStaticProps() {
   const posts = (await getPost2()) || [];
+  await generateRSSFeed();
   return {
     props: { posts },
     revalidate: 60
