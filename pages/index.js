@@ -148,17 +148,17 @@ const generateRSSFeed = async()=>{
       date: new Date(post.createdAt),
     });
   });
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'production') {
+    // fs.mkdirSync("./rss", { recursive: true });
+    fs.writeFileSync("feed.xml", feed.rss2());
+    fs.writeFileSync("atom.xml", feed.atom1());
+    fs.writeFileSync("feed.json", feed.json1());
+  }
+  else {
     fs.mkdirSync("./public/rss", { recursive: true });
     fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
     fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
     fs.writeFileSync("./public/rss/feed.json", feed.json1());
-  }
-  else {
-    fs.mkdirSync("./rss", { recursive: true });
-    fs.writeFileSync("./rss/feed.xml", feed.rss2());
-    fs.writeFileSync("./rss/atom.xml", feed.atom1());
-    fs.writeFileSync("./rss/feed.json", feed.json1());
   }
   // const staticOutputPath = path.join(process.cwd(), 'rss');
   // // console.log(staticOutputPath)
