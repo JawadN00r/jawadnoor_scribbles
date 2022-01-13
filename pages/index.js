@@ -148,25 +148,23 @@ const generateRSSFeed = async()=>{
       date: new Date(post.createdAt),
     });
   });
-  if (process.env.NODE_ENV === 'production') {
-    // fs.mkdirSync("./rss", { recursive: true });
-    fs.writeFileSync("feed.xml", feed.rss2());
-    fs.writeFileSync("atom.xml", feed.atom1());
-    fs.writeFileSync("feed.json", feed.json1());
-  }
-  else {
-    fs.mkdirSync("./public/rss", { recursive: true });
-    fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
-    fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
-    fs.writeFileSync("./public/rss/feed.json", feed.json1());
-  }
-  // const staticOutputPath = path.join(process.cwd(), 'rss');
-  // // console.log(staticOutputPath)
-  // // console.log({process})
-  // fs.mkdirSync(staticOutputPath, { recursive: true });
-  // fs.writeFileSync(path.join(staticOutputPath,'feed.xml'), feed.rss2());
-  // fs.writeFileSync(path.join(staticOutputPath,'atom.xml'), feed.atom1());
-  // fs.writeFileSync(path.join(staticOutputPath,'feed.json'), feed.json1());
+  fs.mkdirSync("./public/rss", { recursive: true });
+  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
+  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
+  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+
+  // if (process.env.NODE_ENV === 'production') {
+  //   // fs.mkdirSync("./rss", { recursive: true });
+  //   fs.writeFileSync("feed.xml", feed.rss2());
+  //   fs.writeFileSync("atom.xml", feed.atom1());
+  //   fs.writeFileSync("feed.json", feed.json1());
+  // }
+  // else {
+  //   fs.mkdirSync("./public/rss", { recursive: true });
+  //   fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
+  //   fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
+  //   fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  // }
 }
 
 export async function getStaticProps() {
