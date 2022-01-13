@@ -148,10 +148,18 @@ const generateRSSFeed = async()=>{
       date: new Date(post.createdAt),
     });
   });
-  fs.mkdirSync("./public/rss", { recursive: true });
-  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
-  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
-  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  if (process.env.NODE_ENV === 'development') {
+    fs.mkdirSync("./public/rss", { recursive: true });
+    fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
+    fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
+    fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  }
+  else {
+    fs.mkdirSync("./.next/serverless/rss", { recursive: true });
+    fs.writeFileSync("./.next/serverless/rss/feed.xml", feed.rss2());
+    fs.writeFileSync("./.next/serverless/rss/atom.xml", feed.atom1());
+    fs.writeFileSync("./.next/serverless/rss/feed.json", feed.json1());
+  }
 }
 
 export async function getStaticProps() {
