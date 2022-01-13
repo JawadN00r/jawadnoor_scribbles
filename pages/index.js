@@ -155,11 +155,18 @@ const generateRSSFeed = async()=>{
     fs.writeFileSync("./public/rss/feed.json", feed.json1());
   }
   else {
-    fs.mkdirSync("../static/rss", { recursive: true });
-    fs.writeFileSync("../static/rss/feed.xml", feed.rss2());
-    fs.writeFileSync("../static/rss/atom.xml", feed.atom1());
-    fs.writeFileSync("../static/rss/feed.json", feed.json1());
+    fs.mkdirSync("./.next/serverless/pages/rss", { recursive: true });
+    fs.writeFileSync("./.next/serverless/pages/rss/feed.xml", feed.rss2());
+    fs.writeFileSync("./.next/serverless/pages/rss/atom.xml", feed.atom1());
+    fs.writeFileSync("./.next/serverless/pages/rss/feed.json", feed.json1());
   }
+  // const staticOutputPath = path.join(process.cwd(), 'rss');
+  // // console.log(staticOutputPath)
+  // // console.log({process})
+  // fs.mkdirSync(staticOutputPath, { recursive: true });
+  // fs.writeFileSync(path.join(staticOutputPath,'feed.xml'), feed.rss2());
+  // fs.writeFileSync(path.join(staticOutputPath,'atom.xml'), feed.atom1());
+  // fs.writeFileSync(path.join(staticOutputPath,'feed.json'), feed.json1());
 }
 
 export async function getStaticProps() {
