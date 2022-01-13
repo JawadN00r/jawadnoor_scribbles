@@ -155,10 +155,10 @@ const generateRSSFeed = async()=>{
     fs.writeFileSync("./public/rss/feed.json", feed.json1());
   }
   else {
-    fs.mkdirSync("./.next/server/static/rss", { recursive: true });
-    fs.writeFileSync("./.next/server/static/rss/feed.xml", feed.rss2());
-    fs.writeFileSync("./.next/server/static/rss/atom.xml", feed.atom1());
-    fs.writeFileSync("./.next/server/static/rss/feed.json", feed.json1());
+    fs.mkdirSync("../static/rss", { recursive: true });
+    fs.writeFileSync("../static/rss/feed.xml", feed.rss2());
+    fs.writeFileSync("../static/rss/atom.xml", feed.atom1());
+    fs.writeFileSync("../static/rss/feed.json", feed.json1());
   }
 }
 
