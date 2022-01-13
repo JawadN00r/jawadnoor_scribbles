@@ -148,10 +148,16 @@ const generateRSSFeed = async()=>{
       date: new Date(post.createdAt),
     });
   });
+  
   fs.mkdirSync("./public/rss", { recursive: true });
   fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
   fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
   fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  
+  fs.mkdirSync("./rss", { recursive: true });
+  fs.writeFileSync("./rss/feed.xml", feed.rss2());
+  fs.writeFileSync("./rss/atom.xml", feed.atom1());
+  fs.writeFileSync("./rss/feed.json", feed.json1());
 
   // if (process.env.NODE_ENV === 'production') {
   //   // fs.mkdirSync("./rss", { recursive: true });
