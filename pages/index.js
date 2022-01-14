@@ -149,15 +149,23 @@ const generateRSSFeed = async()=>{
     });
   });
   
-  fs.mkdirSync("./public/rss", { recursive: true });
-  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
-  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
-  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  try {
+    fs.mkdirSync("./public/rss", { recursive: true });
+    fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
+    fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
+    fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  } catch (error) {
+    console.log("failed in ./public/rss/");
+  }
   
-  fs.mkdirSync("./rss", { recursive: true });
-  fs.writeFileSync("./rss/feed.xml", feed.rss2());
-  fs.writeFileSync("./rss/atom.xml", feed.atom1());
-  fs.writeFileSync("./rss/feed.json", feed.json1());
+  try {
+    fs.mkdirSync("./rss", { recursive: true });
+    fs.writeFileSync("./rss/feed.xml", feed.rss2());
+    fs.writeFileSync("./rss/atom.xml", feed.atom1());
+    fs.writeFileSync("./rss/feed.json", feed.json1());
+  } catch (error) {
+    console.log("failed in ./rss/");
+  }
 
   // if (process.env.NODE_ENV === 'production') {
   //   // fs.mkdirSync("./rss", { recursive: true });
