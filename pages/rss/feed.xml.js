@@ -1,4 +1,3 @@
-import React from "react";
 import { getPosts } from "../../services";
 import { Feed } from "feed";
 
@@ -56,23 +55,19 @@ const generateRSSFeed = async () => {
   return feed.rss2();
 };
 
-const feed = ({ posts }) => {
-  return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: posts,
-      }}
-    ></div>
-  );
+const feed = () => {
+  return null;
 };
 
 export default feed;
 
-export async function getStaticProps() {
+export async function getServerSideProps({ res }) {
   const posts = await generateRSSFeed();
+  res.setHeader("Content-Type", "text/xml");
+  res.write(posts);
+  res.end();
   return {
-    props: { posts },
-    revalidate: 60,
+    props: {},
   };
 }
 
