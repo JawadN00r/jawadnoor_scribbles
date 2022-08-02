@@ -49,7 +49,7 @@ export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-4 sm:px-10 mb-8 relative">
       <Head>
-        <title>JawadAsif's Scribbles</title>
+        <title>JawadNoor's Scribbles</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="searchBox post-styles_searchBox">

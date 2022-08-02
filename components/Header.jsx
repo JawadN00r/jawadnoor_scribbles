@@ -16,7 +16,7 @@ const Header = () => {
             <span className="cursor-pointer font-bold text-2xl sm:text-3xl lg:text-4xl
              text-white"
               id="hh">
-              JawadAsif's Scribbles
+              JawadNoor's Scribbles
             </span>
           </Link>
         </div>
