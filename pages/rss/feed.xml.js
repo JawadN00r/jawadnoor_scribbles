@@ -3,12 +3,12 @@ import { Feed } from "feed";
 
 const generateRSSFeed = async () => {
   const posts = await getPosts();
-  const siteURL = "https://blog.jawadnoor.vercel.app";
+  const siteURL = "https://codes.jawad.com.bd";
   const date = new Date();
   const author = {
     name: "Md Jawad Noor Asif",
     email: "jawad.asif.bd@gmail.com",
-    link: "https://jawadnoor.vercel.app",
+    link: "https://jawad.com.bd",
   };
   const feed = new Feed({
     title: "JawadNoor's Scribbles",
